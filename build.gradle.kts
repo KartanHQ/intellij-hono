@@ -17,7 +17,7 @@ intellij {
     version.set("2021.3")
     type.set("IU") // Target IDE Platform
 
-    plugins.set(listOf('JavaScript'))
+    plugins.set(listOf("JavaScript"))
 }
 
 tasks {
