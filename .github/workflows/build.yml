@@ -14,9 +14,7 @@ on:
 
 jobs:
 
-  # Run Gradle Wrapper Validation Action to verify the wrapper's checksum
-  # Run verifyPlugin, and IntelliJ Plugin Verifier
-  # Build plugin and provide the artifact for the next workflow jobs
+  # Prepare environment and build the plugin
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -40,13 +38,9 @@ jobs:
       - name: Gradle Wrapper Validation
         uses: gradle/wrapper-validation-action@v1.0.6
 
-      # Setup Java 11 environment for the next steps
-      - name: Setup Java
-        uses: actions/setup-java@v3.11.0
-        with:
-          distribution: zulu
-          java-version: 11
-          cache: gradle
+      # Setup Gradle
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2.4.2
 
       # Set environment variables
       - name: Export Properties
