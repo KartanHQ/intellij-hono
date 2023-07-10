@@ -31,8 +31,7 @@ class HonoCliProjectGenerator : NpmPackageProjectGenerator() {
 
     override fun generateInTemp(): Boolean = true
 
-    override fun generatorArgs(project: Project?, dir: VirtualFile?, settings: Settings?) =
-        project?.let { arrayOf(it.name) }
+    override fun generatorArgs(project: Project, baseDir: VirtualFile) = arrayOf(project.name)
 
     override fun getIcon(): Icon = HonoIcons.ProjectGenerator
 }
