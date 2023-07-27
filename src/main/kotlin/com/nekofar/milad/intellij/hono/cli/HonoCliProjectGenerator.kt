@@ -8,7 +8,6 @@ import com.intellij.openapi.roots.ContentEntry
 import com.intellij.openapi.vfs.VirtualFile
 import com.nekofar.milad.intellij.hono.HonoBundle.message
 import com.nekofar.milad.intellij.hono.HonoIcons
-import javax.swing.Icon
 
 class HonoCliProjectGenerator : NpmPackageProjectGenerator() {
     private val packageName = "create-hono"
