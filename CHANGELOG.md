@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+## [1.1.0] - 2024-10-06
+
+### Features
+
+- Add `messagePointer` method in `HonoBundle`
+
+### Security
+
+- Update action versions and fix typos
+
 ## [1.0.15] - 2024-10-05
 
 ### Bug Fixes
